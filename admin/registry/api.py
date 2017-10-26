@@ -1,11 +1,15 @@
 import requests as req
 import json
+from flask import Flask, current_app,g
 
-#REG_URL = 'http://10.100.100.130:6001/v2'
-REG_URL = 'http://10.20.60.3:6001/v2'
+
+REG_URL = 'http://10.100.100.130:6001/v2/'
+#REG_URL = 'http://10.20.60.3:6001/v2'
+
 
 def get_repos():
-    url = REG_URL + '/_catalog'
+    #import pdb; pdb.set_trace()
+    url = REG_URL + '_catalog'
     res = req.get(url)
     return res
 

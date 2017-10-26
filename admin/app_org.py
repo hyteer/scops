@@ -10,7 +10,7 @@ from jinja2 import Markup
 from flask_admin import Admin, form
 from flask_admin.form import rules
 from flask_admin.contrib import sqla
-from .api import *
+
 
 
 # Create application
@@ -251,4 +251,4 @@ if __name__ == '__main__':
         build_sample_db()
 
     # Start app
-    app.run(debug=True)
+    app.run(debug=True,port=5001)

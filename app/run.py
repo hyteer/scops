@@ -8,6 +8,11 @@ from main import app
 def index():
     return "home..."
 
+@app.route('/debug')
+def index():
+    import pdb; pdb.set_trace()
+    return "debug..."
+
 @app.route('/staticurl/<filename>')
 def static_url(filename):
     return url_for("static",filename=filename)
