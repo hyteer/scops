@@ -25,4 +25,4 @@ def admin():
     return '<a href="/admin/">Click me to get to Admin!</a>'
 
 if __name__ == '__main__':
-    app.run(debug=True,threaded=True)
+    app.run(port=8000,debug=True,threaded=True)
